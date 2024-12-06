@@ -1,0 +1,6 @@
+com\orangehrm\qa\testcases\SupportPageTest.class
+com\orangehrm\qa\testcases\ChangePasswordPageTest.class
+com\orangehrm\qa\testcases\AboutPageTest.class
+com\orangehrm\qa\testcases\DashboardPageTest.class
+com\orangehrm\qa\testcases\ForgotPasswordPageTest.class
+com\orangehrm\qa\testcases\LoginPageTest.class

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="5" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="com.orangehrm.qa.testcases.AboutPageTest">
+        <methods>
+          <include name="aboutEmployeesTerminatedValueTest"/>
+          <include name="aboutVersionTest"/>
+          <include name="aboutHeaderTest"/>
+          <include name="tearDown"/>
+          <include name="SetUp"/>
+          <include name="aboutVersionValueTest"/>
+        </methods>
+      </class> <!-- com.orangehrm.qa.testcases.AboutPageTest -->
+      <class name="com.orangehrm.qa.testcases.DashboardPageTest">
+        <methods>
+          <include name="headerDropdownSupportTest"/>
+          <include name="SetUp"/>
+          <include name="headerDropdownAboutTest"/>
+          <include name="helpButtonTest"/>
+          <include name="labelUsernameImageTest"/>
+          <include name="tearDown"/>
+          <include name="headerDropdownChangePasswordTest"/>
+          <include name="labelUsernameDropdownIconTest"/>
+          <include name="headerDropdownLogout"/>
+        </methods>
+      </class> <!-- com.orangehrm.qa.testcases.DashboardPageTest -->
+      <class name="com.orangehrm.qa.testcases.ForgotPasswordPageTest">
+        <methods>
+          <include name="labelVersionTest"/>
+          <include name="labelUsernameTest"/>
+          <include name="clickMainPageLinkTest"/>
+          <include name="iconPersonTest"/>
+          <include name="enterUsernameTest"/>
+          <include name="tearDown"/>
+          <include name="clickCancelButtonTest"/>
+          <include name="headerResetPasswordTest"/>
+          <include name="descriptionTextTest"/>
+          <include name="clickResetButtonTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.orangehrm.qa.testcases.ForgotPasswordPageTest -->
+      <class name="com.orangehrm.qa.testcases.LoginPageTest">
+        <methods>
+          <include name="verifyLoginTest"/>
+          <include name="validateViewPasswordTest"/>
+          <include name="clickOrangehrmWebsiteTest"/>
+          <include name="clickOnForgtPasswordLinkTest"/>
+          <include name="tearDown"/>
+          <include name="validateIconPersonTest"/>
+          <include name="validateViewVersionTest"/>
+          <include name="validateDemoUserTest"/>
+          <include name="validateDemoPasswordTest"/>
+          <include name="validateIconUserTest"/>
+          <include name="SetUp"/>
+          <include name="validateViewUsernameTest"/>
+          <include name="validateViewSocialLinksTest"/>
+          <include name="validateViewCopyRightsTest"/>
+        </methods>
+      </class> <!-- com.orangehrm.qa.testcases.LoginPageTest -->
+      <class name="com.orangehrm.qa.testcases.SupportPageTest">
+        <methods>
+          <include name="supportInformationTest"/>
+          <include name="supportMainWebsiteTest"/>
+          <include name="supportConnactSupportTest"/>
+          <include name="supportDescriptionTest"/>
+          <include name="SetUp"/>
+          <include name="tearDown"/>
+          <include name="supportCopyrightsTest"/>
+          <include name="supportversionTest"/>
+        </methods>
+      </class> <!-- com.orangehrm.qa.testcases.SupportPageTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->
