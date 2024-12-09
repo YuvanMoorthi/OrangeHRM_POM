@@ -1,5 +1,10 @@
 package com.orangehrm.qa.testcases;
 
-public class ChangePasswordPageTest {
+import com.orangehrm.qa.base.SeleniumBase;
+
+public class ChangePasswordPageTest extends SeleniumBase {
+	public ChangePasswordPageTest() {
+		super();
+	}
 
 }

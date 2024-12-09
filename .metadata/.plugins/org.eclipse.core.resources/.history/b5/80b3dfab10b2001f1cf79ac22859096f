@@ -1,0 +1,12 @@
+package com.orangehrm.qa.pages;
+
+import org.openqa.selenium.support.PageFactory;
+
+import com.orangehrm.qa.base.SeleniumBase;
+
+public class AboutPage extends SeleniumBase {
+	public AboutPage() {
+		PageFactory.initElements(driver, this);
+	}
+
+}

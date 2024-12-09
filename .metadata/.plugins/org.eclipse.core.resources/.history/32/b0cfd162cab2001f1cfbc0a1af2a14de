@@ -1,0 +1,113 @@
+package com.orangehrm.qa.testcases;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.orangehrm.qa.base.SeleniumBase;
+import com.orangehrm.qa.pages.AboutPage;
+import com.orangehrm.qa.pages.ChangePasswordPage;
+import com.orangehrm.qa.pages.DashboardPage;
+import com.orangehrm.qa.pages.LoginPage;
+import com.orangehrm.qa.pages.SupportPage;
+import com.orangehrm.qa.utils.TestUtil;
+
+public class DashboardPageTest extends SeleniumBase {
+    private LoginPage loginPage;
+    private DashboardPage dashboardPage;
+    private AboutPage aboutPage;
+    private SupportPage supportPage;
+    private ChangePasswordPage changePasswordPage;
+
+    // ------------------------------ Setup ------------------------------
+    @BeforeMethod
+    public void setUp() {
+        initialization();
+        loginPage = new LoginPage();
+        dashboardPage = loginPage.enterLoginCredentials(prop.getProperty("username"), prop.getProperty("password"));
+        aboutPage = new AboutPage();
+        supportPage = new SupportPage();
+        changePasswordPage = new ChangePasswordPage();
+    }
+
+    // ------------------------------ Tests ------------------------------
+
+    // Validate upgrade link navigation
+    @Test(priority = 1, description = "Verify the upgrade link redirects to the OrangeHRM main website")
+    public void verifyUpgradeLinkNavigation() {
+        dashboardPage.clickUpgradeLink();
+        TestUtil.switchToWindowByIndex(driver, 1);
+        Assert.assertTrue(dashboardPage.isMainWebsiteLogoDisplayed(), "Main website logo is not displayed after clicking the upgrade link.");
+        driver.close();
+        TestUtil.switchToWindowByIndex(driver, 0);
+        Assert.assertTrue(dashboardPage.isUsernameLabelDisplayed(), "Failed to return to the dashboard after closing the upgrade link window.");
+    }
+
+    // Validate username label presence
+    @Test(priority = 2, description = "Verify username label is displayed on the dashboard")
+    public void verifyUsernameLabelDisplayed() {
+        Assert.assertTrue(dashboardPage.isUsernameLabelDisplayed(), "Username label is not displayed on the dashboard.");
+    }
+
+    // Validate username image presence
+    @Test(priority = 3, description = "Verify username image is displayed on the dashboard")
+    public void verifyUsernameImageDisplayed() {
+        Assert.assertTrue(dashboardPage.isUsernameImageDisplayed(), "Username image is not displayed on the dashboard.");
+    }
+
+    // Validate header dropdown icon functionality
+    @Test(priority = 4, description = "Verify header dropdown menu appears on clicking the dropdown icon")
+    public void verifyHeaderDropdownIcon() {
+        dashboardPage.clickUsernameDropdownIcon();
+        Assert.assertTrue(dashboardPage.isHeaderDropdownMenuDisplayed(), "Header dropdown menu is not displayed.");
+    }
+
+    // Validate help button functionality
+    @Test(priority = 5, description = "Verify help button opens a new window and navigates correctly")
+    public void verifyHelpButtonNavigation() {
+        dashboardPage.clickHelpButton();
+        TestUtil.switchToWindowByIndex(driver, 1);
+        Assert.assertTrue(dashboardPage.isHelpMainPageDisplayed(), "Help main page is not displayed.");
+        driver.close();
+        TestUtil.switchToWindowByIndex(driver, 0);
+        Assert.assertTrue(dashboardPage.isUsernameLabelDisplayed(), "Failed to return to the dashboard after closing the help page.");
+    }
+
+    // Validate header dropdown about link
+    @Test(priority = 6, description = "Verify header dropdown 'About' link navigates to the About page")
+    public void verifyHeaderDropdownAbout() {
+        dashboardPage.clickHeaderDropdownAbout();
+        Assert.assertTrue(aboutPage.isAboutHeaderDisplayed(), "About page header is not displayed.");
+    }
+
+    // Validate header dropdown support link
+    @Test(priority = 7, description = "Verify header dropdown 'Support' link navigates to the Support page")
+    public void verifyHeaderDropdownSupport() {
+        dashboardPage.clickHeaderDropdownSupport();
+        Assert.assertTrue(supportPage.isSupportDescriptionDisplayed(), "Support page description is not displayed.");
+    }
+
+    // Validate header dropdown change password link
+    @Test(priority = 8, description = "Verify header dropdown 'Change Password' link navigates to the Change Password page")
+    public void verifyHeaderDropdownChangePassword() {
+        dashboardPage.clickHeaderDropdownChangePassword();
+        Assert.assertTrue(changePasswordPage.isChangePasswordHeaderDisplayed(), "Change Password page header is not displayed.");
+    }
+
+    // Validate header dropdown logout functionality
+    @Test(priority = 9, description = "Verify header dropdown 'Logout' link logs out and navigates to the login page")
+    public void verifyHeaderDropdownLogout() {
+        dashboardPage.clickHeaderDropdownLogout();
+        Assert.assertTrue(loginPage.isLoginPageHeaderDisplayed(), "Failed to logout and navigate to the login page.");
+    }
+
+    // ------------------------------ Teardown ------------------------------
+    @AfterMethod
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
+}
+s

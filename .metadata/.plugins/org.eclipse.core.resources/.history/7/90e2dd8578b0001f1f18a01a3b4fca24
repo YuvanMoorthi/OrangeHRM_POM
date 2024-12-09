@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Project_01</groupId>
+	<artifactId>OrangeHRM</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+
+	<dependencies>
+		<!-- TestNG Dependency -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.4.0</version> <!-- Match your project's TestNG version -->
+			<scope>test</scope>
+		</dependency>
+
+		<!-- ExtentReports Dependency -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>4.1.6</version> <!-- Use version 4.x for ExtentHtmlReporter -->
+		</dependency>
+
+		<!-- Selenium WebDriver Dependency -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.13.0</version> <!-- Use the latest stable version -->
+		</dependency>
+	</dependencies>
+</project>

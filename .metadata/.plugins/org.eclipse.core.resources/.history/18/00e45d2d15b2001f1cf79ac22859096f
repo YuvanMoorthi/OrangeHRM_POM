@@ -1,0 +1,40 @@
+package com.orangehrm.qa.pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.orangehrm.qa.base.SeleniumBase;
+
+public class AboutPage extends SeleniumBase {
+	/**
+	 * PageObject
+	 */
+	@FindBy(xpath = "//h6[normalize-space()='About']")
+	WebElement aboutHeader;
+
+	@FindBy(xpath = "//p[normalize-space()='Company Name:']")
+	WebElement aboutCompanyName;
+	@FindBy(xpath = "//p[normalize-space()='Version:']")
+	WebElement aboutVersion;
+	@FindBy(xpath = "//p[normalize-space()='Active Employees:']")
+	WebElement aboutActiveEmployees;
+	@FindBy(xpath = "//p[normalize-space()='Employees Terminated:']")
+	WebElement aboutEmployeesTerminated;
+	@FindBy(xpath = "//p[normalize-space()='OrangeHRM']")
+	WebElement aboutCompanyNameValue;
+	@FindBy(xpath = "//p[@class='oxd-text oxd-text--p orangehrm-about-text'][normalize-space()='OrangeHRM OS 5.7']")
+	WebElement aboutVersionValue;
+	@FindBy(xpath = "(//div[@class='oxd-grid-item oxd-grid-item--gutters'])[6]")
+	WebElement aboutActiveEmployees;
+	@FindBy(xpath = "(//div[@class='oxd-grid-item oxd-grid-item--gutters'])[8]")
+	WebElement aboutEmployeesTerminatedValue;
+
+	/**
+	 * PageObject initializing
+	 */
+	public AboutPage() {
+		PageFactory.initElements(driver, this);
+	}
+
+}

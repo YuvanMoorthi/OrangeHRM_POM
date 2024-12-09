@@ -1,0 +1,38 @@
+package com.orangehrm.qa.testcases;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+import com.orangehrm.qa.base.SeleniumBase;
+import com.orangehrm.qa.pages.AboutPage;
+import com.orangehrm.qa.pages.DashboardPage;
+import com.orangehrm.qa.pages.LoginPage;
+
+public class SupportPageTest extends SeleniumBase {
+	LoginPage loginpage;
+	DashboardPage dashboardpage;
+	AboutPage aboutpage;
+
+	public SupportPageTest() {
+		super();
+	}
+
+	@BeforeMethod
+	public void SetUp() {
+		initialization();
+		loginpage = new LoginPage();
+		dashboardpage = loginpage.enterLoginCredentials(prop.getProperty("username"), prop.getProperty("password"));
+		aboutpage = dashboardpage.headerDropdownAbout();
+	}
+
+	@AfterMethod
+	public void tearDown() {
+		try {
+			if (driver != null) {
+				driver.quit();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

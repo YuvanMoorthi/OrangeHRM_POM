@@ -1,0 +1,28 @@
+package com.orangehrm.qa.util;
+
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+
+import com.orangehrm.qa.base.SeleniumBase;
+
+public class TestUtil extends SeleniumBase {
+	public static long implicityWait = 30;
+
+	/**
+	 * This method is used for switch between windows using index value
+	 * 
+	 * @index - this index is used to switch between the windows
+	 */
+
+	// Method to switch to a window by index
+	public static void switchToWindowByIndex(WebDriver driver, int index) {
+		List<String> windowHandles = List.copyOf(driver.getWindowHandles());
+		if (index >= 0 && index < windowHandles.size()) {
+			// Switch to the window by the specified index
+			driver.switchTo().window(windowHandles.get(index));
+		} else {
+			System.out.println("Invalid index: " + index);
+		}
+	}
+}

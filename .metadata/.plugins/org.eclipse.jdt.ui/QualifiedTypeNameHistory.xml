@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.orangehrm.qa.pages.AboutPage"/>
+    <fullyQualifiedTypeName name="java.nio.channels.SelectableChannel"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="com.orangehrm.qa.util.TestUtil"/>
+    <fullyQualifiedTypeName name="org.testng.Assert"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
+    <fullyQualifiedTypeName name="com.orangehrm.qa.base.SeleniumBase"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.FindBy"/>
+    <fullyQualifiedTypeName name="com.orangehrm.qa.testcases.ChangePasswordPageTest"/>
+    <fullyQualifiedTypeName name="com.orangehrm.qa.pages.ChangePasswordPage"/>
+    <fullyQualifiedTypeName name="com.orangehrm.qa.pages.LoginPage"/>
+</qualifiedTypeNameHistroy>

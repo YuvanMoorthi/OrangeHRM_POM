@@ -1,0 +1,15 @@
+package com.orangehrm.qa.pages;
+
+import org.openqa.selenium.support.PageFactory;
+
+import com.orangehrm.qa.base.SeleniumBase;
+
+public class SupportPage extends SeleniumBase {
+	// ------------------------------PageObject------------------------------
+
+	// ----------------PageObject Initializing-------------------------------
+	public SupportPage() {
+		PageFactory.initElements(driver, this);
+	}
+
+}

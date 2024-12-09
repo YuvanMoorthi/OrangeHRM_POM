@@ -1,0 +1,78 @@
+package com.orangehrm.qa.testcases;
+
+import static org.testng.Assert.assertTrue;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.orangehrm.qa.base.SeleniumBase;
+import com.orangehrm.qa.pages.ForgotPasswordPage;
+import com.orangehrm.qa.pages.LoginPage;
+
+public class ForgotPasswordPageTest extends SeleniumBase {
+	ForgotPasswordPage forgotpasswordpage;
+	LoginPage loginpage;
+
+	public ForgotPasswordPageTest() {
+		super();
+	}
+
+	@BeforeMethod
+	public void setUp() {
+		initialization();
+		forgotpasswordpage = loginpage.clickOnForgotPasswordLink();
+
+	}
+
+	@Test(priority = 1)
+	public void headerResetPasswordTest() {
+		boolean headerResetPassword = forgotpasswordpage.headerResetPassword();
+		assertTrue(headerResetPassword, "header of the forgot password page is not displayed");
+
+	}
+
+	@Test(priority = 2)
+	public void descriptionTextTest() {
+		boolean descriptionText = forgotpasswordpage.descriptionText();
+		assertTrue(descriptionText, "description of the forgot password page is not displayed");
+
+	}
+
+	@Test(priority = 1)
+	public void iconPersonTest() {
+		forgotpasswordpage.iconPerson();
+
+	}
+
+	@Test(priority = 1)
+	public void clickMainPageLinkTest() {
+
+	}
+
+	@Test(priority = 1)
+	public void clickMainPageLinkTest() {
+
+	}
+
+	@Test(priority = 1)
+	public void clickMainPageLinkTest() {
+
+	}
+
+	@Test(priority = 1)
+	public void clickMainPageLinkTest() {
+
+	}
+
+	@Test(priority = 1)
+	public void clickMainPageLinkTest() {
+
+	}
+
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
+
+}
