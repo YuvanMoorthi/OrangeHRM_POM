@@ -1,9 +1,0 @@
-com\orangehrm\qa\pages\AboutPage.class
-com\orangehrm\qa\pages\DashboardPage.class
-com\orangehrm\qa\pages\ForgotPasswordPage.class
-com\orangehrm\qa\util\TestUtil.class
-com\orangehrm\qa\pages\ChangePasswordPage.class
-com\orangehrm\qa\pages\SupportPage.class
-com\orangehrm\qa\ExtentReporterListener\ExtentReportListener.class
-com\orangehrm\qa\pages\LoginPage.class
-com\orangehrm\qa\base\SeleniumBase.class

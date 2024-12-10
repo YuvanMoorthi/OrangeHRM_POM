@@ -1,5 +1,0 @@
-# Created at 2024-12-06T12:23:37.417
-Boot Manifest-JAR contains absolute paths in classpath 'D:\Yuvan\Final_OrangeHRM\OrangeHRM\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-'other' has different root
-
