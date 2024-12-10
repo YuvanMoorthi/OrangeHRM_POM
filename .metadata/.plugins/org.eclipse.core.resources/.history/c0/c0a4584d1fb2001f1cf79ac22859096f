@@ -1,7 +1,0 @@
-package com.orangehrm.qa.testcases;
-
-import com.orangehrm.qa.base.SeleniumBase;
-
-public class AboutPageTest extends SeleniumBase {
-
-}

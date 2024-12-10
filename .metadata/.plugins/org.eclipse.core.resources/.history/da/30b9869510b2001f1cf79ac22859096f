@@ -1,7 +1,0 @@
-package com.orangehrm.qa.pages;
-
-import com.orangehrm.qa.base.SeleniumBase;
-
-public class AboutPage extends SeleniumBase {
-
-}
